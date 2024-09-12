@@ -3,7 +3,7 @@ Maybe this is not A* necessarily, but takes inspiration from some ideas I've gle
 
 Today, I wanted to learn the A* pathfinding algorithm. Reading the [wikipedia source](https://en.wikipedia.org/wiki/A*_search_algorithm) on the algorithm, I understand that the crux of the algorithm is minimizing some function that is to estimate how bad choosing to go to one node in a graph might be.
 
-In the graph I wrote in R, there are no edges displayed because it is assumed that the agent can go to any node it wants. After finding the node ids to traverse, I visualize the results at the end. Gold lines indicating how the path was set.
+In the graph I wrote in R, there are no edges displayed because it is assumed that the agent can go to any node it wants so long as it is a node within the radius it can travel in one move. After finding the node ids to traverse, I visualize the results at the end. Gold lines indicating how the path was set.
 
 A great part in how I understand the A* algorithm works is that it is minimizing an F score which is for a node n, F(n) = g(n) + h(n) where g(n) is the cost function, i.e., summing the weights of the previous edges. And h(n) is a problem-specific heuristic function which I had to think through.
 
